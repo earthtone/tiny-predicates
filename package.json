@@ -1,0 +1,51 @@
+{
+  "name": "@earthtone/tiny-predicates",
+  "version": "0.0.1",
+  "description": "A collection of point-free predicate functions in JavaScript",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.unpkg.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint . --fix",
+    "test": "ava",
+    "pretest": "npm run lint",
+    "prebuild": "npm test && npm run clean",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "js",
+    "fp",
+    "point-free"
+  ],
+  "author": "Tonio Hubilla <earthlyillusion@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.8",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.23.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
+}
