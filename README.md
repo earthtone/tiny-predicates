@@ -1,5 +1,7 @@
 # Tiny Predicates
 
+![CI Status](https://travis-ci.org/earthtone/tiny-predicates.svg?branch=master)
+
 A collection of point-free predicate functions.
 
 ---
