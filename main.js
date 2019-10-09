@@ -1,3 +1,13 @@
 // ESM syntax is supported.
-import * as predicates from './src'
-export default predicates
+import { isNil, isArray, isInteger, isNumber, isObject, isRegexp, isString, isFunction, isEmpty } from './src'
+export {
+  isNil,
+  isArray,
+  isInteger,
+  isNumber,
+  isObject,
+  isRegexp,
+  isString,
+  isFunction,
+  isEmpty
+}
